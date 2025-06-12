@@ -282,6 +282,7 @@ def main():
 
     url = st.text_input("Paste YouTube video URL here")
     if st.button("Go"):
+        st.video(url)  # ✅ 유튜브 영상 표시
         st.write(f"\U0001F4FA You entered: {url}")
         with st.spinner("\U0001F50E댓글을 분류중입니다... 잠시만 기다려주세요"):
             df = get_comments(url)
